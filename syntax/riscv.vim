@@ -24,6 +24,8 @@ syntax match   riscvLabelColon /:/ contained
 syntax match   riscvLabel      /\w\+:/ contains=riscvLabelColon
 " A reference to a local label using <num>[BF]
 syntax match   riscvLabelRef   /\d\+[bf]/
+" Preprocessor directives
+syn match riscvPreProc "^\s*#\s*\(include\|define\|undef\|ifdef\|ifndef\|if\|else\|elif\|endif\)\>"
 
 " Registers
 " Numbered registers
@@ -407,6 +409,7 @@ syntax match   riscvDirective "\<%tls_gd_pcrel_hi\>"
 syntax match   riscvDirective "\<%got_pcrel_hi\>"
 
 hi def link riscvComment        Comment
+hi def link riscvPreProc        PreProc
 hi def link riscvTodo           Todo
 hi def link riscvNumber         Number
 hi def link riscvString         String
