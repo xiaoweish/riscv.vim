@@ -26,6 +26,8 @@ syntax match   riscvLabel      /\w\+:/ contains=riscvLabelColon
 syntax match   riscvLabelRef   /\d\+[bf]/
 " Preprocessor directives
 syn match riscvPreProc "^\s*#\s*\(include\|define\|undef\|ifdef\|ifndef\|if\|else\|elif\|endif\)\>"
+" Highlight hexadecimal numbers without 0x prefix
+syntax match asmHex "\<[0-9A-Fa-f]\+h\?\>" contains=@NoSpell
 
 " Registers
 " Numbered registers
@@ -422,5 +424,6 @@ hi def link riscvInstruction    Keyword
 hi def link riscvDebug          Debug
 hi def link riscvOption         Identifier
 hi def link riscvLabelRef       Identifier
+hi def link asmHex              Number
 
 let b:current_syntax = "riscv"
