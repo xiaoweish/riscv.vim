@@ -84,7 +84,7 @@ syntax match   riscvCSRegister /\<tdata[1-3]\>/
 syntax keyword riscvCSRegister dcsr dpc
 syntax match   riscvCSRegister /\<dscratch[0-1]\?\>/
 
-#CLIC CSR
+" CLIC CSR
 syntax keyword riscvCSRegister mtvt mnxti mintthresh mintstatus mscratchcsw mscratchcswl
 
 " Assembler directives
