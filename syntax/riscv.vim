@@ -84,6 +84,9 @@ syntax match   riscvCSRegister /\<tdata[1-3]\>/
 syntax keyword riscvCSRegister dcsr dpc
 syntax match   riscvCSRegister /\<dscratch[0-1]\?\>/
 
+#CLIC CSR
+syntax keyword riscvCSRegister mtvt mnxti mintthresh mintstatus mscratchcsw mscratchcswl
+
 " Assembler directives
 syntax keyword riscvDirective .align .ascii .file .globl .local .comm .common .ident
 syntax keyword riscvDirective .section .size .text .data .rodata .bss .string .asciz .asciiz
@@ -92,6 +95,7 @@ syntax keyword riscvDirective .4byte .word .long .8byte .dword .quad .skip
 syntax keyword riscvDirective .dtprelword .dtpreldword .sleb128 .uleb128
 syntax keyword riscvDirective .p2align .balign
 syntax keyword riscvDirective .global .float .double .set .attribute
+syntax keyword riscvDirective .ifdef .else .endif .ifndef
 
 " RV32I
 " Integer Register-Immediate Instructions
